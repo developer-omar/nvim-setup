@@ -1,0 +1,77 @@
+{
+  "Single File Component Composition API": {
+    "prefix": "v3base",
+    "body": [
+      "<script>",
+      "export default {",
+      "\tsetup() {",
+      "\t\t$1",
+      "\t}",
+      "}",
+      "</script>\n",
+      "<template>",
+      "\t<div>",
+      "\t\t",
+      "\t</div>",
+      "</template>\n",
+      "<style scoped>",
+      "",
+      "</style>"
+    ]
+  },
+  "Single File Component Setup Composition API": {
+    "prefix": "v3base-setup",
+    "body": [
+      "<script setup>",
+      "$1",
+      "</script>\n",
+      "<template>",
+      "\t<div>",
+      "\t\t",
+      "\t</div>",
+      "</template>\n",
+      "<style scoped>",
+      "",
+      "</style>"
+    ]
+  },
+  "Single File Component Composition API with Typescript": {
+    "prefix": "v3base-ts",
+    "body": [
+      "<script lang=\"ts\">",
+      "import { defineComponent } from \"vue\";\n",
+      "export default defineComponent({",
+      "\tsetup() {",
+      "\t\t$1",
+      "",
+      "\t\treturn {}",
+      "\t}",
+      "}",
+      "</script>\n",
+      "<template>",
+      "\t<div>",
+      "\t\t",
+      "\t</div>",
+      "</template>\n",
+      "<style scoped>",
+      "",
+      "</style>"
+    ]
+  },
+  "Single File Component Setup Composition API with Typescript": {
+    "prefix": "v3base-ts-setup",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "$1",
+      "</script>\n",
+      "<template>",
+      "\t<div>",
+      "\t\t",
+      "\t</div>",
+      "</template>\n",
+      "<style scoped>",
+      "",
+      "</style>"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "Destructuring an object": {
+    "prefix": [
+      "dobj"
+    ],
+    "body": "const { $1 } = ${2:object};"
+  },
+  "Destructuring an array": {
+    "prefix": [
+      "darr"
+    ],
+    "body": "const [ $1 ] = ${2:array};"
+  },
+  "Arrow function with arguments": {
+    "prefix": [
+      "afn"
+    ],
+    "body": [
+      "($1) => {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "Export all in a file": {
+    "prefix": "expall",
+    "body": [
+      "export * from \"./$1\";"
+    ]
+  }
+}
