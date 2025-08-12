@@ -1,70 +1,77 @@
-return {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    event = "VeryLazy",
-    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
-    keys = {
-      { "<c-space>", desc = "Increment Selection" },
-      { "<bs>", desc = "Decrement Selection", mode = "x" },
-    },
-    config = function ()
-      require('nvim-treesitter.configs').setup({
-        ensure_installed = {
-          "lua",
-          "html",
-          "javascript",
-          "json",
-          "jsonc",
-          "markdown",
-          "php",
-          "typescript",
-          "vue",
-          "yaml",
-          "python",
-          "twig",
-          "dart",
-          "angular",
-          "sql",
-          "vim",
-          "vimdoc",
-          "kdl",
-          "toml",
-          "tsx",
-          "xml",
-          "bash",
-          "css",
-          "scss",
-          "htmldjango",
-        },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "<C-space>",
-            node_incremental = "<C-space>",
-            scope_incremental = false,
-            node_decremental = "<bs>",
-          },
-        },
-        sync_install = false,
-        auto_install = true,
-        ignore_install = { "" },
-        indent = {
-          enable = true,
-          disable = { "yaml" }
-        },
-        highlight = {
-          enable = true,
-          disable = { "" },
-          additional_vim_regex_highlighting = true,
-        },
-      })
-    end
+return { 
+  -- Highlight, edit, and navigate code
+  'nvim-treesitter/nvim-treesitter',
+  build = ':TSUpdate',
+  main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+
+  keys = {
+    { "<c-space>", desc = "Increment Selection" },
+    { "<bs>", desc = "Decrement Selection", mode = "x" },
   },
-  -- {
-  --   "nvim-treesitter/nvim-treesitter-textobjects",
-  --   dependencies = {
-  --     "nvim-treesitter/nvim-treesitter"
-  --   }
-  -- }
+  opts = {
+    ensure_installed = {
+      "lua",
+      'luadoc',
+      "html",
+      "javascript",
+      "json",
+      "jsonc",
+      "markdown",
+      'markdown_inline',
+      "php",
+      "typescript",
+      "vue",
+      "yaml",
+      "python",
+      "twig",
+      "dart",
+      "angular",
+      "sql",
+      "vim",
+      "vimdoc",
+      "kdl",
+      "toml",
+      "tsx",
+      "xml",
+      "bash",
+      "css",
+      "scss",
+      "htmldjango",
+
+    }, 
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "<C-space>",
+        node_incremental = "<C-space>",
+        scope_incremental = false,
+        node_decremental = "<bs>",
+      },
+    },
+
+    -- Autoinstall languages that are not installed
+    auto_install = true,
+    highlight = {
+      enable = true,
+      -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
+      --  If you are experiencing weird indenting issues, add the language to
+      --  the list of additional_vim_regex_highlighting and disabled languages for indent.
+      additional_vim_regex_highlighting = true,
+    },
+    indent = { 
+      enable = true, 
+      disable = { '' },
+      additional_vim_regex_highlighting = true,
+    },
+  },
+  -- There are additional nvim-treesitter modules that you can use to interact
+  -- with nvim-treesitter. You should go explore a few and see what interests you:
+  --
+  --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
+  --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
+  --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 }
+
+
+

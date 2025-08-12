@@ -1,8 +1,8 @@
 
 vim.keymap.set({ "i", "n", "v" }, "<c-c>", [[<c-\><c-n>]], { desc = "Escape from other modes" })
 
-vim.keymap.set("n", "<tab>", ":bnext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<s-tab>", ":bprevious<cr>", { desc = "Previous buffer", silent = true })
+vim.keymap.set("n", "<s-l>", ":bnext<cr>", { desc = "Next buffer", silent = true })
+vim.keymap.set("n", "<s-h>", ":bprevious<cr>", { desc = "Previous buffer", silent = true })
 
 -- <c-o>b<c-o>de is to delete a word without a whitespace
 vim.keymap.set("i", "<c-d>", "<c-o>b<c-o>dw", { desc = "Delete a word in insert mode" })
@@ -33,9 +33,7 @@ vim.keymap.set("n", "<leader>wD", "<c-w>o", { desc = "Delete all other windows" 
 vim.keymap.set("n", "<leader>ws", "<cmd>split<cr>", { desc = "Create a horizontal split", silent = true })
 vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>", { desc = "Create a vertical split", silent = true })
 
-vim.keymap.set("n", "<c-s>", "<cmd>RemoveTrailingWhitespaces<cr><cmd>update<cr>", { desc = "Save file", silent = true })
-vim.keymap.set("v", "<c-s>", "<c-c><cmd>RemoveTrailingWhitespaces<cr><cmd>update<cr>", { desc = "Save file", silent = true })
-vim.keymap.set("i", "<c-s>", "<c-c><cmd>RemoveTrailingWhitespaces<cr><cmd>update<cr>", { desc = "Save file", silent = true })
+vim.keymap.set({"n", "i", "v"}, "<c-s>", "<esc><cmd>w<cr>", { desc = "Save file", silent = true })
 
 vim.keymap.set("v", ">", ">gv", { desc = "Indent a selection", silent = true })
 vim.keymap.set("v", "<", "<gv", { desc = "Dedent a selection", silent = true })

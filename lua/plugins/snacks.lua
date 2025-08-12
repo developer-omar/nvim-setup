@@ -17,6 +17,22 @@ return {
     words = { enabled = true },
     bigfile = { enabled = true },
     quickfile = { enabled = true },
+    explorer = { enabled = true },
+    picker = { enabled = true }
     -- dashboard = { enabled = true },
+  },
+  keys = {
+    { "<leader>n", function()
+      if Snacks.config.picker and Snacks.config.picker.enabled then
+        Snacks.picker.notifications()
+      else
+        Snacks.notifier.show_history()
+      end
+    end, desc = "Notification History" },
+    { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
+    { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
+    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+    { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
   },
 }
