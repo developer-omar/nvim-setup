@@ -4,11 +4,6 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {},
   keys = {
-    {
-      "<leader>,",
-      "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
-      desc = "Switch Buffer",
-    },
     -- { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
     { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
     { "<leader><space>", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Find Buffer"},
@@ -50,11 +45,6 @@ return {
     { "<leader>sW", "<cmd>FzfLua grep_cWORD<cr>", desc = "Search WORD under cursor" },
     { "<leader>sw", "<cmd>FzfLua grep_visual<cr>", mode = "v", desc = "Selection visual selection" },
     { "<leader>uC", "<cmd>FzfLua colorschemes<cr>", desc = "Colorscheme with Preview" },
-    -- { "<leader>sw", LazyVim.pick("grep_cword"), desc = "Word (Root Dir)" },
-    -- { "<leader>sW", LazyVim.pick("grep_cword", { root = false }), desc = "Word (cwd)" },
-    -- { "<leader>sw", LazyVim.pick("grep_visual"), mode = "v", desc = "Selection (Root Dir)" },
-    -- { "<leader>sW", LazyVim.pick("grep_visual", { root = false }), mode = "v", desc = "Selection (cwd)" },
-    -- { "<leader>uC", LazyVim.pick("colorschemes"), desc = "Colorscheme with Preview" },
     -- {
     --   "<leader>ss",
     --   function()
@@ -75,3 +65,4 @@ return {
     -- },
   },
 }
+

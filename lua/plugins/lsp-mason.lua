@@ -207,14 +207,21 @@ return {
             },
           },
         },
-        ts_ls = {}, -- Tupesctipt
+        
+        vimls = {}, -- Vimscript
 
-        vue_ls = {},
-        vtsls = {},
+        -- ts_ls = {}, -- Tupesctipt
 
+        angularls = {}, -- Angular
+
+        vue_ls = {}, -- Vue
+        vtsls = {}, -- Typescript with wrapper vscode
+
+        html = {},
         emmet_language_server = {},
         cssls = {},
         css_variables = {},
+        tailwindcss = {},
 
         intelephense = {}, -- PHP
         twiggy_language_server = {}, -- Synfony's Twig
