@@ -35,6 +35,7 @@ return {
 
 			python = { "isort", "black" },
 
+			-- php = { "php_cs_fixer" },
 			php = { "php-cs-fixer" },
 
 			sh = { "shfmt" },
@@ -43,7 +44,26 @@ return {
 		},
 		default_format_opts = {
 			lsp_format = "fallback",
+			-- lsp_format = "never",
 		},
+		-- formatters = {
+		-- php_cs_fixer = {
+		-- 	command = "docker compose",
+		-- 	-- command = vim.fn.expand("../../scripts/docker-php-cs-fixer.sh"),
+		-- 	-- TODO: Arreglar esta parte para formatear codigo php
+		-- 	args = function(ctx)
+		-- 		return {
+		-- 			"run",
+		-- 			"--rm",
+		-- 			"php-cs-fixer",
+		-- 			"fix",
+		-- 			"/app/" .. vim.fn.fnamemodify(ctx.filename, ":t"),
+		-- 			"--config=.php-cs-fixer.php",
+		-- 			"--quiet",
+		-- 		}
+		-- 	end,
+		-- },
+		-- },
 	},
 	init = function()
 		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"

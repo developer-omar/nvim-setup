@@ -15,7 +15,7 @@ vim.opt.shiftround = true
 vim.opt.mouse = "a"
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+	vim.opt.clipboard = "unnamedplus"
 end)
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -36,3 +36,5 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 vim.wo.wrap = false
 vim.opt.splitright = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true

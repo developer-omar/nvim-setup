@@ -18,7 +18,7 @@ return {
 			-- executed command priority is 'cmd' (if exists)
 			-- otherwise auto-detect prioritizes `fd`:`rg`:`find`
 			-- default options are controlled by 'fd|rg|find|_opts'
-			fd_opts = [[--color=never --hidden --type f --type l --exclude .git --exclude node_modules]],
+			fd_opts = [[--color=never --hidden --type f --type l --exclude .git --exclude node_modules --exclude vendor]],
 		},
 	},
 	keys = {

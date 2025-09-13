@@ -19,8 +19,17 @@ return {
 					},
 				})
 			end,
-			mode = { "n", "v" },
+			mode = "n",
 			desc = "Search and Replace",
+		},
+		{
+			"<leader>sr",
+			function()
+				-- Aquí estás en modo visual, así que puedes usar '<,'> en un rango
+				vim.cmd("'<,'>GrugFarWithin")
+			end,
+			mode = "v",
+			desc = "Search and Replace (visual selection)",
 		},
 	},
 }

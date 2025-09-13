@@ -22,34 +22,35 @@ return {
 	},
 	opts = {
 		ensure_installed = {
-			"lua",
-			"luadoc",
+			"angular",
+			"bash",
+			"blade",
+			"css",
+			"dart",
+			"dockerfile",
 			"html",
+			"htmldjango",
 			"javascript",
 			"json",
 			"jsonc",
+			"kdl",
+			"lua",
+			"luadoc",
 			"markdown",
 			"markdown_inline",
 			"php",
-			"typescript",
-			"vue",
-			"yaml",
 			"python",
-			"twig",
-			"dart",
-			"angular",
+			"scss",
 			"sql",
-			"vim",
-			"vimdoc",
-			"kdl",
 			"toml",
 			"tsx",
+			"twig",
+			"typescript",
+			"vim",
+			"vimdoc",
+			"vue",
 			"xml",
-			"bash",
-			"css",
-			"scss",
-			"htmldjango",
-			"blade",
+			"yaml",
 		},
 		incremental_selection = {
 			enable = true,
@@ -97,6 +98,15 @@ return {
 			},
 		},
 	},
+	-- TODO: fix this part, cause conflict with selection <c-space>
+	-- config = function()
+	-- 	vim.filetype.add({
+	-- 		pattern = {
+	-- 			[".*Dockerfile.*"] = "dockerfile",
+	-- 		},
+	-- 	})
+	-- end,
+
 	-- config = function(_, opts)
 	--   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 	--

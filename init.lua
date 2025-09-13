@@ -1,9 +1,10 @@
 require("config.options")
 require("core.lazy")
 require("core.lsp")
-require("config.keymaps")
 require("config.autocmds")
+require("config.keymaps")
 
+-- hola mundo como estas
 -- LSP Configurations
 -- vim.lsp.config('*', {
 --   on_attach = function(client, bufnr)

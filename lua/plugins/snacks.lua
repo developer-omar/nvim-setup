@@ -76,6 +76,22 @@ return {
 			end,
 			desc = "Buffer Lines",
 		},
+
+		{
+			"<leader>st",
+			function()
+				Snacks.picker.todo_comments()
+			end,
+			desc = "Todo",
+		},
+
+		{
+			"<leader>sT",
+			function()
+				Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME", "NOTE" } })
+			end,
+			desc = "Todo/Fix/Fixme",
+		},
 	},
 	init = function()
 		vim.api.nvim_create_autocmd("User", {
@@ -102,6 +118,18 @@ return {
 				Snacks.toggle.inlay_hints():map("<leader>uh")
 				Snacks.toggle.indent():map("<leader>ug")
 				Snacks.toggle.dim():map("<leader>uD")
+				-- Snacks.toggle({
+				-- 	name = "Git Signs",
+				-- 	get = function()
+				-- 		return require("gitsigns.config").config.signcolumn ~= "no"
+				-- 	end,
+				-- 	set = function(state)
+				-- 		require("gitsigns").toggle_signs(state)
+				-- 	end,
+				-- 	-- icon = { enabled = "✅", disabled = "🚫" },
+				-- 	-- notify = true,
+				-- 	wk_desc = { enabled = "Disable", disabled = "Enable" },
+				-- }):map("<leader>uG")
 			end,
 		})
 	end,
@@ -126,7 +154,8 @@ return {
 		explorer = { enabled = true },
 		picker = { enabled = true },
 		rename = { enabled = true },
-		dim = { enabled = false },
+		dim = { enabled = true },
+		bufdelete = { enabled = true },
 		dashboard = {
 			enabled = true,
 			preset = {
