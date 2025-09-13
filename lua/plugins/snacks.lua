@@ -152,7 +152,20 @@ return {
 		bigfile = { enabled = true },
 		quickfile = { enabled = true },
 		explorer = { enabled = true },
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			-- layout = {
+			-- 	cycle = true,
+			-- 	preset = "vertical",
+			-- 	layout = {
+			-- 		{
+			-- 			height = 0.55,
+			-- 			-- values input, list, preview
+			-- 			win = "preview",
+			-- 		},
+			-- 	},
+			-- },
+		},
 		rename = { enabled = true },
 		dim = { enabled = true },
 		bufdelete = { enabled = true },

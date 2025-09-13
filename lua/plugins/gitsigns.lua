@@ -6,7 +6,6 @@ return {
 	lazy = true,
 	-- This plugin is lazy and is enabled before reading a file or create a new file
 	event = { "BufReadPre", "BufNewFile" },
-	-- TODO: set keymap q to close Blame buffer
 	keys = {
 		{
 			"[[",

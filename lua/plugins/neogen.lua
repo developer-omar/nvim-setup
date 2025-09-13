@@ -30,7 +30,7 @@ return {
 			{ desc = "Generate File Annotation", silent = true }
 		)
 		-- Jump among placeholders
-		-- NOTE: Change for use tab and s-tab, configurating in blink-cmp
+		-- TODO: Change for use tab and s-tab, configurating in blink-cmp
 
 		local opts = { noremap = true, silent = true }
 		vim.api.nvim_set_keymap("i", "<C-l>", "<cmd>lua require('neogen').jump_next()<cr>", opts)
