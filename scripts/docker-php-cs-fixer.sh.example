@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# This is a script for using globally php-cs-fixer in a docker container
+# This is a example script for using globally php-cs-fixer in a docker container
+# You have to make a copy of this file with .sh extension and modify LOCAL_BASE AND CONTAINER_BASE
+# according to your needs
 
 # Path of file to format
 LOCAL_PATH="$1"
