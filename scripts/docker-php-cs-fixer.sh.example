@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This is a script for using globally php-cs-fixer in a docker container
+
+# Path of file to format
+LOCAL_PATH="$1"
+
+# Path to projects folder
+LOCAL_BASE="/path/to/folder/projects"
+CONTAINER_BASE="/var/www"
+
+# Replacing local path with container path
+CONTAINER_PATH="${LOCAL_PATH/$LOCAL_BASE/$CONTAINER_BASE}"
+
+# echo $CONTAINER_PATH
+# Running php-cs-fixer in the container with the new path
+docker exec -i php-fpm php-cs-fixer fix --config="$CONTAINER_BASE/php-cs-fixer.php" "$CONTAINER_PATH"
