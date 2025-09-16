@@ -41,7 +41,7 @@ return {
 
 			local formatters = {
 				"stylua", -- Lua
-				"php-cs-fixer", -- PHP
+				-- "php-cs-fixer", -- PHP
 				"prettier", -- Web and Markdown
 				"shfmt", -- Shell and Bash
 				"isort", -- Python

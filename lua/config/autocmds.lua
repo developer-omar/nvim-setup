@@ -129,12 +129,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Format on save a file using conform
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
-	end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- 	pattern = "*",
+-- 	callback = function(args)
+-- 		-- if vim.fn.executable("php-cs-fixer") == 1 then
+-- 		-- else
+-- 		-- end
+-- 		require("conform").format({ bufnr = args.buf })
+-- 	end,
+-- })
 
 -- Setting for integratin oil with snack's rename
 vim.api.nvim_create_autocmd("User", {
