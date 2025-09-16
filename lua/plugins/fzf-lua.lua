@@ -33,8 +33,8 @@ return {
 		-- { "<leader>fF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
 
 		-- Git
-		{ "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "Commits" },
-		{ "<leader>gC", "<cmd>FzfLua git_bcommits<CR>", desc = "Commits Buffer" },
+		-- { "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "Commits" },
+		-- { "<leader>gC", "<cmd>FzfLua git_bcommits<CR>", desc = "Commits Buffer" },
 		{ "<leader>gs", "<cmd>FzfLua git_status<CR>", desc = "Status" },
 		{ "<leader>gb", "<cmd>FzfLua git_branches<CR>", desc = "Branches" },
 		-- { "<leader>gB", "<cmd>FzfLua git_blame<CR>", desc = "Blame" },
