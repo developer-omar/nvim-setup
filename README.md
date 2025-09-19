@@ -48,28 +48,22 @@ This configuration works with Php (Laravel, Symfony) and Javascript/Typescript (
    sudo apt install python3-venv
    ```
 
-9. Install chafa (optional)
+9. Install lazygit
 
    ```bash
-   sudo apt install chafa
+   sudo apt install lazygit
    ```
 
-## Installing new LSP configs
+10. Install chafa (optional)
 
-1. You need to download LSP config files from [this page](https://github.com/neovim/nvim-lspconfig/tree/master/lsp)
-   into `lsp` folder (You can see the options for each lsp file in the [documentation page](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md) ).
+    ```bash
+    sudo apt install chafa
+    ```
 
-2. Once you have downloaded the LSP config files, you need to enable the language servers in Neovim
-   by adding the file names to the `lspServers` variable in `code/lsp.lua`.
+## Installing new LSP servers and other tools (formatters, linters, etc)
 
-3. Finally you must install the LSP servers with Mason by adding the LSP server names to the `lspServers`
-   variable in `lua/plugins/mason.lua`, this will make an automatic installation.
-
-4. Restart Neovim.
-
-## Installing new Formatters
-
-1. You need to use Mason for automatic installation of formatters by adding formatter names
-   to the `formatters` variable in `lua/plugins/mason.lua`.
+1. You need to add lsp servers to `lspconfig-mason.lua` file in `lspServers` variable, and if you want to install
+   other tools adding in `otherTools` variable in the same file (You can see the options for each lsp
+   file in the [documentation page](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md) ).
 
 2. Restart Neovim.
