@@ -21,7 +21,7 @@ return {
 	{
 		-- Autocompletion
 		"saghen/blink.cmp",
-		event = "VimEnter",
+		event = { "InsertEnter", "CmdlineEnter" },
 		version = "1.*",
 		dependencies = {
 			-- Snippet Engine
@@ -38,13 +38,13 @@ return {
 					return "make install_jsregexp"
 				end)(),
 				dependencies = {
-					-- `friendly-snippets` contains a variety of premade snippets.
-					--    See the README about individual language/framework/plugin snippets:
-					--    https://github.com/rafamadriz/friendly-snippets
 					{
 						"rafamadriz/friendly-snippets",
 						config = function()
 							require("luasnip.loaders.from_vscode").lazy_load()
+							-- User snippets
+							local configPath = vim.fn.stdpath("config")
+							require("luasnip.loaders.from_vscode").lazy_load({ paths = { configPath .. "/snippets" } })
 						end,
 					},
 				},
@@ -52,24 +52,12 @@ return {
 			},
 		},
 		opts = {
+			-- Disable/Enable blink in cmdline
+			cmdline = {
+				enabled = true,
+			},
+
 			keymap = {
-				-- 'default' (recommended) for mappings similar to built-in completions
-				--   <c-y> to accept ([y]es) the completion.
-				--    This will auto-import if your LSP supports it.
-				--    This will expand snippets if the LSP sent a snippet.
-				-- 'super-tab' for tab to accept
-				-- 'enter' for enter to accept
-				-- 'none' for no mappings
-				--
-				-- For an understanding of why the 'default' preset is recommended,
-				-- you will need to read `:help ins-completion`
-				--
-				-- No, but seriously. Please read `:help ins-completion`, it is really good!
-				--
-				-- All presets have the following mappings:
-				-- <tab>/<s-tab>: move to right/left of your snippet expansion
-				-- <c-space>: Open menu or open docs if already open
-				-- <c-n>/<c-p> or <up>/<down>: Select next/previous item
 				-- <c-e>: Hide menu
 				-- <c-k>: Toggle signature help
 				--
@@ -93,7 +81,6 @@ return {
 					selection = { preselect = true, auto_insert = false },
 				},
 				-- By default, you may press `<c-space>` to show the documentation.
-				-- Optionally, set `auto_show = true` to show the documentation after a delay.
 				documentation = { auto_show = true, auto_show_delay_ms = 500 },
 			},
 			signature_help = {
@@ -108,10 +95,19 @@ return {
 						module = "lazydev.integrations.blink",
 						score_offset = 100,
 					},
+					snippets = {
+						opts = {
+							friendly_snippets = true,
+							-- Adding framework snippets to a filetype
+							extended_filetypes = {
+								typescript = { "angular" },
+							},
+						},
+					},
 				},
 			},
 
-			snippets = { preset = "luasnip" },
+			-- snippets = { preset = "luasnip" },
 
 			-- Blink.cmp includes an optional, recommended rust fuzzy matcher,
 			-- which automatically downloads a prebuilt binary when enabled.

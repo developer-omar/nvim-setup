@@ -10,6 +10,7 @@ return {
 		winopts = {
 			fullscreen = false, -- Use the picker in fullscreen
 			preview = {
+				wrap = true,
 				layout = "vertical", -- flex|horizontal|vertical default flex
 				vertical = "down:55%",
 			},

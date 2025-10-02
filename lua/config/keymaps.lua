@@ -3,7 +3,7 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("n", "<leader>K", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
-vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+-- vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- TIP: Disable arrow keys in normal mode
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
@@ -48,8 +48,9 @@ vim.keymap.set({ "i", "n", "v" }, "<c-c>", [[<c-\><c-n>]], { desc = "Escape From
 vim.keymap.set({ "n" }, "gC", "gUwlguwh", { desc = "Capitalize A Word" })
 
 -- Buffers
-vim.keymap.set("n", "<s-l>", ":bnext<cr>", { desc = "Next Buffer", silent = true })
-vim.keymap.set("n", "<s-h>", ":bprevious<cr>", { desc = "Previous Buffer", silent = true })
+-- Uncomment this part if you uninstall Bufferline plugin
+-- vim.keymap.set("n", "<s-l>", ":bnext<cr>", { desc = "Next Buffer", silent = true })
+-- vim.keymap.set("n", "<s-h>", ":bprevious<cr>", { desc = "Previous Buffer", silent = true })
 vim.keymap.set("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer And Window", silent = true })
 vim.keymap.set("n", "<leader>bd", function()
 	Snacks.bufdelete()

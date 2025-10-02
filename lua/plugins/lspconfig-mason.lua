@@ -50,35 +50,6 @@ return {
 					vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc, silent = true })
 				end
 
-				vim.keymap.set("n", "K", function()
-					-- local bufnr = vim.api.nvim_get_current_buf()
-					-- local params = vim.lsp.util.make_position_params()
-					-- local clients = vim.lsp.get_active_clients({ bufnr = bufnr })
-					--
-					-- for _, client in ipairs(clients) do
-					-- 	if client.server_capabilities.hoverProvider then
-					-- 		client.request("textDocument/hover", params, function(err, result, ctx, config)
-					-- 			if err or not result or not result.contents then
-					-- 				return
-					-- 			end
-					--
-					-- 			local markdown_lines = vim.lsp.util.convert_input_to_markdown_lines(result.contents)
-					-- 			markdown_lines = vim.lsp.util.trim_empty_lines(markdown_lines)
-					--
-					-- 			if not vim.tbl_isempty(markdown_lines) then
-					-- 				vim.lsp.util.open_floating_preview(
-					-- 					markdown_lines,
-					-- 					"markdown",
-					-- 					{ border = "rounded" }
-					-- 				)
-					-- 			end
-					-- 		end, bufnr)
-					-- 		return -- Detenemos después del primer cliente que responde con contenido
-					-- 	end
-					-- end
-					print("No information available 888")
-				end, { noremap = true, silent = true })
-
 				-- Rename the variable under your cursor.
 				map("<leader>cr", vim.lsp.buf.rename, "Rename")
 				map("gd", vim.lsp.buf.definition, "Go to Definition")
@@ -87,7 +58,7 @@ return {
 				map("gI", vim.lsp.buf.implementation, "Goto Implementation")
 				map("gr", vim.lsp.buf.references, "Goto References")
 				map("gy", vim.lsp.buf.type_definition, "Goto Type Definition")
-				-- map("gK", vim.lsp.buf.signature_help, "Signature Help")
+				map("gK", vim.lsp.buf.signature_help, "Signature Help")
 				map("<c-k>", vim.lsp.buf.signature_help, "Signature Help", { "i" })
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("<leader>ov", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
@@ -190,7 +161,7 @@ return {
 
 		------------------- INSTALLING LSP SERVERS AND OTHER TOOLS --------------------------------------------
 
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
+		-- local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		local lspServers = {
 			lua_ls = {},
@@ -208,17 +179,33 @@ return {
 			vtsls = {},
 			angularls = {},
 			laravel_ls = {},
+			rnix = {},
+			-- gopls = {},
 		}
 
 		local otherTools = {
+			-- FORMATTERS
 			"stylua", -- Lua
-			-- "php-cs-fixer", -- PHP
+			-- "php-cs-fixer", -- Needing PHP is installed
 			"prettier", -- Web and Markdown
 			"shfmt", -- Shell and Bash
 			"isort", -- Python
 			"black", -- Python
 			"djlint", -- Django templates
 			"blade-formatter", -- Blade templates
+			"yamlfix",
+			-- "htmlbeautifier", -- Needing Ruby is installed
+			-- LINTERS
+			"luacheck",
+			"eslint_d",
+			"pylint",
+			"phpcs",
+			"htmlhint",
+			"stylelint",
+			"golangci-lint",
+			"markdownlint",
+			"yamllint",
+			"nixfmt",
 		}
 		-- You can add other tools (formatters, linters, etc) - Mason will install
 		local ensure_installed = vim.tbl_keys(lspServers or {})

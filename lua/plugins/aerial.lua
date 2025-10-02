@@ -4,6 +4,8 @@
 return {
 	"stevearc/aerial.nvim",
 	opts = function(_, opts)
+		-- opts.layout = opts.layout or {}
+		-- opts.layout.width = 60
 		-- Keymap to open the sidebar
 		vim.keymap.set("n", "<leader>cs", "<cmd>AerialToggle<cr>")
 

@@ -9,10 +9,19 @@ return {
 					"tokyonight-storm",
 					-- "tokyonight-day",
 					"tokyonight-moon",
-					"catppuccin-latte",
+					-- "catppuccin-latte",
 					"catppuccin-frappe",
 					"catppuccin-macchiato",
 					"catppuccin-mocha",
+					-- "github_dark",
+					-- "github_dark_default",
+					-- "github_dark_dimmed",
+					-- "github_dark_high_contrast",
+					-- "github_dark_colorblind",
+					-- "github_dark_tritanopia",
+					-- "onedark",
+					-- "onedark_vivid",
+					-- "onedark_dark",
 					-- "kanagawa", -- have other styles
 					-- "rose-pine-main",
 					-- "rose-pine-moon",
@@ -23,16 +32,7 @@ return {
 					-- "nord",
 					-- "nordic",
 					-- "night-owl",
-					-- "onedark",
 					-- "onelight",
-					-- "onedark_vivid",
-					-- "onedark_dark",
-					-- "github_dark",
-					-- "github_dark_default",
-					-- "github_dark_dimmed",
-					-- "github_dark_high_contrast",
-					-- "github_dark_colorblind",
-					-- "github_dark_tritanopia",
 					-- "flow", -- have other styles
 					-- "fluoromachine",
 					-- "nightfox",
@@ -113,6 +113,16 @@ return {
 			},
 		},
 	},
+
+	-- {
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	name = "github-theme",
+	-- },
+
+	-- {
+	-- 	"olimorris/onedarkpro.nvim",
+	-- 	priority = 1000, -- Ensure it loads first
+	-- },
 
 	-- {
 	--   "rebelot/kanagawa.nvim",
@@ -213,16 +223,6 @@ return {
 	--   --   require("night-owl").setup()
 	--   --   vim.cmd.colorscheme("night-owl")
 	--   -- end,
-	-- },
-
-	-- {
-	--   "olimorris/onedarkpro.nvim",
-	--   priority = 1000, -- Ensure it loads first
-	-- },
-
-	-- {
-	--   "projekt0n/github-nvim-theme",
-	--   name = "github-theme",
 	-- },
 
 	-- {

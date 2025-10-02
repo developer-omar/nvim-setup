@@ -39,19 +39,21 @@ return {
 				typescriptreact = { "prettier" },
 				json = { "prettier" },
 				jsonc = { "prettier" },
-				yaml = { "prettier" },
+				yaml = { "yamlfix" },
 				markdown = { "prettier" },
 				html = { "prettier" },
 				css = { "prettier" },
 				scss = { "prettier" },
 
 				python = { "isort", "black" },
+				htmldjango = { "djlint" },
 
 				php = { "phpcsfixer" },
 
 				sh = { "shfmt" },
 				bash = { "shfmt" },
 				blade = { "blade-formatter" },
+				nix = { "nixfmt" },
 			},
 
 			formatters = {
