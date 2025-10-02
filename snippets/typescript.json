@@ -1,35 +1,6 @@
 {
-  "Vue 3 defining a composable": {
-    "prefix": "v3composable",
-    "body": [
-      "import {  ref } from \"vue\";\n",
-      "const use${1:ComposableName} = () => {",
-      "\t$2\n",
-      "\treturn {",
-      "\t\t",
-      "\t}",
-      "}\n",
-      "export { use${1:ComposableName} };"
-    ]
-  },
-  "Route definition": {
-    "prefix": "v3route",
-    "body": [
-      "{",
-      "\tpath: \"$1\",",
-      "\tname: \"$2\",",
-      "\tcomponent: $3",
-      "},"
-    ]
-  },
-  "Dynamic route definition": {
-    "prefix": "v3dynamic-route",
-    "body": [
-      "{",
-      "\tpath: \"$1\",",
-      "\tname: \"$2\",",
-      "\tcomponent: () => import(\"$3\")",
-      "},"
-    ]
+  "Class/Interface Attribute": {
+    "prefix": "attr",
+    "body": ["${1:attribute}: ${2:type};"]
   }
 }

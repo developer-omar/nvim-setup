@@ -1,0 +1,60 @@
+{
+  "name": "user-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./vscode-snippets.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+          "vue"
+        ],
+        "path": "./common-js-ts.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./typescript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./react-ts.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./angular-ts.json"
+      },
+      {
+        "language": "html",
+        "path": "./angular-html.json"
+      },
+      {
+        "language": "php",
+        "path": "./php.json"
+      }
+    ]
+  }
+}

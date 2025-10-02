@@ -1,0 +1,6 @@
+{
+  "Try-Catch": {
+    "prefix": "tc",
+    "body": ["try {", "\t$2", "} catch(\\Exception \\$e) {", "\t$1", "}"]
+  }
+}

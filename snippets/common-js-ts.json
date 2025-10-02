@@ -1,0 +1,26 @@
+{
+  "Destructuring an Object": {
+    "prefix": ["dobj"],
+    "body": "const { $1 } = ${2:object};"
+  },
+  "Destructuring an Array": {
+    "prefix": ["darr"],
+    "body": "const [ $1 ] = ${2:array};"
+  },
+  "Arrow Function": {
+    "prefix": ["af"],
+    "body": ["($1) => $2"]
+  },
+  "Arrow Function Statements": {
+    "prefix": "afs",
+    "body": ["($1) => {", "\t$2", "}"]
+  },
+  "Export All In a File": {
+    "prefix": "expall",
+    "body": ["export * from \"./$1\";"]
+  },
+  "String Interpolation": {
+    "prefix": "sti",
+    "body": ["\\${$1}"]
+  }
+}

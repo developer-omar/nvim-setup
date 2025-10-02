@@ -1,0 +1,38 @@
+{
+  "Angular If": {
+    "prefix": "aIf",
+    "body": ["@if($1) {", "\t$2", "}$0"]
+  },
+  "Angular If-Else": {
+    "prefix": "aIfElse",
+    "body": ["@if($1) {", "\t$2", "} @else {", "\t$3", "}$0"]
+  },
+  "Angular Else-If": {
+    "prefix": "aElseIf",
+    "body": ["@else if($1) {", "\t$2", "}$0"]
+  },
+  "Angular Else": {
+    "prefix": "aElse",
+    "body": ["@else {", "\t$1", "}$0"]
+  },
+  "Angular For": {
+    "prefix": "aFor",
+    "body": ["@for(${1:item} of ${2:items}; track ${3:index}) {", "\t$4", "}$0"]
+  },
+  "Angular For's Empty": {
+    "prefix": "aEmpty",
+    "body": ["@empty {", "\t$1", "}$0"]
+  },
+  "Angular Switch": {
+    "prefix": "aSwitch",
+    "body": ["@switch($1) {", "\t@case($2){", "\t\t$3", "\t}$0", "}"]
+  },
+  "Angular Switch's Case": {
+    "prefix": "aCase",
+    "body": ["@case($1) {", "\t$2", "}$0"]
+  },
+  "Angular Switch's default": {
+    "prefix": "aDefault",
+    "body": ["@default {", "\t$1", "}$0"]
+  }
+}
