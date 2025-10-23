@@ -2,5 +2,63 @@
   "Try-Catch": {
     "prefix": "tc",
     "body": ["try {", "\t$2", "} catch(\\Exception \\$e) {", "\t$1", "}"]
+  },
+  "Function Definition": {
+    "prefix": "meth",
+    "body": ["$1 function $2($3) {", "\t$4", "}"]
+  },
+  "Enum Documentation": {
+    "prefix": "phpdoc",
+    "body": ["/**", " * $1", " */"]
+  },
+  "Class Documentation": {
+    "prefix": "adoc",
+    "body": [
+      "/**",
+      " * ${1:description}",
+      " *",
+      " * @package $2",
+      " * @author $3",
+      " */"
+    ]
+  },
+  "Class Attribute Documentation": {
+    "prefix": "attdoc",
+    "body": ["/**", " * ${1:description}", " * @var ${2:type}", " */"]
+  },
+  "Constructor Documentation": {
+    "prefix": "ctdoc",
+    "body": [
+      "/**",
+      " * ${1:description}",
+      " *",
+      " * @param ${2:type} \\$${3:variable} ${4:description}",
+      " */"
+    ]
+  },
+  "Function Documentation": {
+    "prefix": "fndoc",
+    "body": [
+      "/**",
+      " * ${1:description}",
+      " *",
+      " * @param ${2:type} \\$${3:variable} ${4:description}",
+      " * @return ${5:type} ${6:description}",
+      " */"
+    ]
+  },
+  "Function Param Documentation": {
+    "prefix": "fpdoc",
+    "body": ["@param ${1:type} \\$${2:variable} ${3:description}"]
+  },
+  "Function Without Params Documentation": {
+    "prefix": "fndoc2",
+    "body": [
+      "/**",
+      " * ${1:description}",
+      " *",
+      " * @return ${2:type} ${3:description}",
+      " */"
+    ]
   }
 }

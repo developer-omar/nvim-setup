@@ -2,5 +2,9 @@
   "Class/Interface Attribute": {
     "prefix": "attr",
     "body": ["${1:attribute}: ${2:type};"]
+  },
+  "Class Method": {
+    "prefix": "meth",
+    "body": ["${1:methodName}($2) {", "\t$3", "}"]
   }
 }

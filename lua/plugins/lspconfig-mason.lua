@@ -59,7 +59,7 @@ return {
 				map("gr", vim.lsp.buf.references, "Goto References")
 				map("gy", vim.lsp.buf.type_definition, "Goto Type Definition")
 				map("gK", vim.lsp.buf.signature_help, "Signature Help")
-				map("<c-k>", vim.lsp.buf.signature_help, "Signature Help", { "i" })
+				map("<c-K>", vim.lsp.buf.signature_help, "Signature Help", { "i" })
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("<leader>ov", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 				map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "v" })
@@ -180,7 +180,7 @@ return {
 			angularls = {},
 			laravel_ls = {},
 			rnix = {},
-			-- gopls = {},
+			gopls = {},
 		}
 
 		local otherTools = {
@@ -193,7 +193,8 @@ return {
 			"black", -- Python
 			"djlint", -- Django templates
 			"blade-formatter", -- Blade templates
-			"yamlfix",
+			"yamlfix", -- Yaml
+			"goimports", -- Go
 			-- "htmlbeautifier", -- Needing Ruby is installed
 			-- LINTERS
 			"luacheck",

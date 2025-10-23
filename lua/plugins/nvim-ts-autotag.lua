@@ -4,5 +4,9 @@
 return {
 	"windwp/nvim-ts-autotag",
 	event = "VeryLazy",
-	opts = {},
+	opts = {
+		per_filetype = {
+			enable_close = false,
+		},
+	},
 }

@@ -34,5 +34,13 @@
   "Angular Switch's default": {
     "prefix": "aDefault",
     "body": ["@default {", "\t$1", "}$0"]
+  },
+  "Braces Attribute": {
+    "prefix": "bat",
+    "body": ["[$1]=\"$2\""]
+  },
+  "Parentheses Attribute": {
+    "prefix": "pat",
+    "body": ["($1)=\"$2\""]
   }
 }
