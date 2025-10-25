@@ -93,3 +93,9 @@ vim.keymap.set({ "n", "i", "v" }, "<c-s>", "<esc><cmd>w<cr>", { desc = "Save fil
 
 vim.keymap.set("v", ">", ">gv", { desc = "Indent a selection", silent = true })
 vim.keymap.set("v", "<", "<gv", { desc = "Dedent a selection", silent = true })
+
+-- Avoid pasting a content instead of writing p in select mode, this when you are working with snippet expansion
+vim.keymap.set("s", "p", "<c-o>c" .. "p", { noremap = true })
+vim.keymap.set("s", "P", "<c-o>c" .. "P", { noremap = true })
+-- Avoid exiting selection mode when erasing selected text with the Backspace key during snippet expansion.
+vim.keymap.set("s", "<bs>", "<c-o>c", { noremap = true })

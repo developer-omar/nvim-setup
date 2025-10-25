@@ -17,7 +17,11 @@
   },
   "Angular For": {
     "prefix": "aFor",
-    "body": ["@for(${1:item} of ${2:items}; track ${3:index}) {", "\t$4", "}$0"]
+    "body": [
+      "@for(${1:item} of ${2:items}; track ${3:\\$index}) {",
+      "\t$4",
+      "}$0"
+    ]
   },
   "Angular For's Empty": {
     "prefix": "aEmpty",
@@ -35,12 +39,12 @@
     "prefix": "aDefault",
     "body": ["@default {", "\t$1", "}$0"]
   },
-  "Braces Attribute": {
-    "prefix": "bat",
+  "Square Brackets Attribute": {
+    "prefix": "sba",
     "body": ["[$1]=\"$2\""]
   },
-  "Parentheses Attribute": {
-    "prefix": "pat",
+  "Parentheses Event Attribute": {
+    "prefix": "pea",
     "body": ["($1)=\"$2\""]
   }
 }

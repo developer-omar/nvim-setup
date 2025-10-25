@@ -68,6 +68,24 @@ vim.api.nvim_create_autocmd("User", {
 	end,
 })
 
+-- htmlangular behave like html file
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "htmlangular",
+	callback = function()
+		vim.bo.filetype = "html" -- Treat as html for LSP and completion
+	end,
+})
+
+-- Setting htmlangular to html files if you are in a angular project
+-- vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+-- 	pattern = "*.html",
+-- 	callback = function()
+-- 		if vim.fn.filereadable("angular.json") == 1 then
+-- 			vim.bo.filetype = "htmlangular"
+-- 		end
+-- 	end,
+-- })
+
 -- vim.api.nvim_create_user_command("ToggleLineNumbers", function()
 --   if vim.api.nvim_get_option_value("number", { scope = "global" }) then
 --     vim.opt.number = false

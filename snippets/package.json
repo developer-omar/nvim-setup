@@ -49,7 +49,7 @@
       },
       {
         "language": "html",
-        "path": "./angular-html.json"
+        "path": "./htmlangular.json"
       },
       {
         "language": "php",

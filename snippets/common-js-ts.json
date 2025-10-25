@@ -20,7 +20,7 @@
     "body": ["export * from \"./$1\";"]
   },
   "String Interpolation": {
-    "prefix": "sti",
+    "prefix": "sin",
     "body": ["\\${$1}"]
   }
 }
