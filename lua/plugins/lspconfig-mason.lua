@@ -176,11 +176,31 @@ return {
 			marksman = {},
 			twiggy_language_server = {},
 			vue_ls = {},
-			vtsls = {},
+			vtsls = {
+				settings = {
+					vtsls = {
+						tsserver = {
+							globalPlugins = {
+								{
+									name = "@vue/typescript-plugin",
+									location = vim.fn.stdpath("data")
+										.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+									languages = { "vue" },
+									configNamespace = "typescript",
+								},
+
+								-- vue_plugin,
+							},
+						},
+					},
+				},
+				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			},
 			angularls = {},
 			laravel_ls = {},
 			rnix = {},
 			gopls = {},
+			copilot = {},
 		}
 
 		local otherTools = {
@@ -213,17 +233,13 @@ return {
 		vim.list_extend(ensure_installed, otherTools)
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
 		require("mason-lspconfig").setup({
 			ensure_installed = {},
 			automatic_installation = false,
-			handlers = {
-				function(server_name)
-					local server = lspServers[server_name] or {}
-					-- server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					require("lspconfig")[server_name].setup(server)
-				end,
-			},
 		})
+		-- loading custom settings of lspServers
+		for name, config in pairs(lspServers) do
+			vim.lsp.config(name, config)
+		end
 	end,
 }
