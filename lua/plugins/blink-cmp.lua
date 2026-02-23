@@ -88,7 +88,7 @@ return {
 			},
 
 			sources = {
-				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+				default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
 				providers = {
 					lazydev = {
 						name = "LazyDev",
@@ -103,6 +103,12 @@ return {
 								typescript = { "angular" },
 							},
 						},
+					},
+					copilot = {
+						name = "copilot",
+						module = "blink-cmp-copilot",
+						score_offset = 100,
+						async = true,
 					},
 				},
 			},
@@ -120,6 +126,14 @@ return {
 
 			-- Shows a signature help window while you type arguments for a function
 			signature = { enabled = true },
+			-- Code for using AI with Avante plugin
+			-- selector = {
+			-- 	--- @alias avante.SelectorProvider "native" | "fzf_lua" | "mini_pick" | "snacks" | "telescope" | fun(selector: avante.ui.Selector): nil
+			-- 	--- @type avante.SelectorProvider
+			-- 	provider = "fzf",
+			-- 	-- Options override for custom providers
+			-- 	provider_opts = {},
+			-- },
 		},
 	},
 }

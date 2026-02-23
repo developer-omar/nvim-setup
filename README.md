@@ -67,3 +67,8 @@ This configuration works with Php (Laravel, Symfony) and Javascript/Typescript (
    file in the [documentation page](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md) ).
 
 2. Restart Neovim.
+
+## Important
+
+This configuration uses Copilot and Avante for AI, but you can use other plugins
+in [this page (ColinKennedy/neovim-ai-plugins)](https://github.com/ColinKennedy/neovim-ai-plugins)
