@@ -11,8 +11,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 -- Round indent
 vim.opt.shiftround = true
--- Enable mouse mode
-vim.opt.mouse = "a"
+-- Enable/Disable mouse mode
+-- vim.opt.mouse = "a"
+vim.opt.mouse = ""
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
@@ -38,3 +39,6 @@ vim.wo.wrap = false
 vim.opt.splitright = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+-- set a vertical column for 80 characters
+vim.opt.colorcolumn = "80"
+-- vim.cmd([[highlight ColorColumn ctermbg=darkgray guibg=#82aaff]])
