@@ -66,7 +66,7 @@ vim.keymap.set("i", "<c-d>", "<c-o>b<c-o>dw", { desc = "Delete A Word In Insert 
 
 -- Duplicate
 vim.keymap.set({ "n", "i" }, "<a-d>", "<cmd>t .<cr>", { desc = "Duplicate A Line", silent = true })
-vim.keymap.set("v", "<a-d>", "y:'><cr>o<esc>p==", { desc = "Duplicate A Block Of Lines", silent = true })
+vim.keymap.set("v", "<a-d>", "y:'><cr>o<esc>p==gv", { desc = "Duplicate A Block Of Lines", silent = true })
 
 -- vim.keymap.set("n", "<a-k>", ":m .-2<cr>==", { desc = "Move a line up", silent = true })
 -- vim.keymap.set("n", "<a-j>", ":m .+1<cr>==", { desc = "Move a line down", silent = true })

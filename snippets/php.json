@@ -7,6 +7,14 @@
     "prefix": "meth",
     "body": ["$1 function $2($3) {", "\t$4", "}"]
   },
+  "Class Attribute": {
+    "prefix": "attr",
+    "body": ["${1:public} \\$${2:attribute};"]
+  },
+  "Class Attribute with Type": {
+    "prefix": "attr2",
+    "body": ["${1:public} ${2:string} \\$${3:attribute};"]
+  },
   "Enum Documentation": {
     "prefix": "phpdoc",
     "body": ["/**", " * $1", " */"]
