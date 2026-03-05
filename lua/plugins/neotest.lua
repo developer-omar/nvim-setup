@@ -10,31 +10,46 @@ return {
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
 		-- adapters
-		"nvim-neotest/neotest-plenary",
+		"marilari88/neotest-vitest",
 		"nvim-neotest/neotest-go",
 		"olimorris/neotest-phpunit",
+		"V13Axel/neotest-pest",
 		"nvim-neotest/neotest-python",
-		"nvim-neotest/neotest-jest",
-		"marilari88/neotest-vitest",
+		"sidlatau/neotest-dart",
+		"nvim-neotest/neotest-plenary",
+		"codymikol/neotest-kotlin",
 	},
 	config = function()
 		require("neotest").setup({
 			adapters = {
+				-- Javascript and Typescript
+				require("neotest-vitest")({
+					-- Filter directories when searching for test files.
+					-- Useful in large projects (see Filter directories notes).
+					filter_dir = function(name, rel_path, root)
+						return name ~= "node_modules"
+					end,
+				}),
+				-- Go
 				require("neotest-go"),
+				-- PHP
 				require("neotest-phpunit")({
 					phpunit_cmd = "vendor/bin/phpunit",
 					filter_dirs = { "vendor", "node_modules", ".git" },
 				}),
+				require("neotest-pest"),
+				-- Python
 				require("neotest-python")({
 					dap = { justMyCode = false },
 				}),
-				require("neotest-jest")({
-					jestCommand = "npm test --",
-					cwd = function(path)
-						return vim.fn.getcwd()
-					end,
+				-- Dart and Flutter
+				require("neotest-dart")({
+					command = "flutter",
+					use_lsp = true,
 				}),
-				require("neotest-vitest")(),
+				-- Kotlin
+				require("neotest-kotlin"),
+
 				require("neotest-plenary"),
 			},
 		})
@@ -42,21 +57,28 @@ return {
 	keys = {
 		{ "<leader>t", "", desc = "+test" },
 		{
-			"<leader>tt",
+			"<leader>tf",
 			function()
 				require("neotest").run.run(vim.fn.expand("%"))
 			end,
 			desc = "Run File (Neotest)",
 		},
 		{
-			"<leader>tT",
+			"<leader>ta",
+			function()
+				require("neotest").run.attach()
+			end,
+			desc = "Attach to Test (Neotest)",
+		},
+		{
+			"<leader>tA",
 			function()
 				require("neotest").run.run(vim.uv.cwd())
 			end,
 			desc = "Run All Test Files (Neotest)",
 		},
 		{
-			"<leader>tr",
+			"<leader>tn",
 			function()
 				require("neotest").run.run()
 			end,
