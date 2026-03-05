@@ -247,7 +247,9 @@ return {
 		})
 		-- loading custom settings of lspServers
 		for name, config in pairs(lspServers) do
-			vim.lsp.config(name, config)
+			if name ~= "dartls" then
+				vim.lsp.config(name, config)
+			end
 		end
 	end,
 }
