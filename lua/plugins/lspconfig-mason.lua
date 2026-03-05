@@ -164,7 +164,15 @@ return {
 		-- local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		local lspServers = {
-			lua_ls = {},
+			lua_ls = {
+				settings = {
+					Lua = {
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+						},
+					},
+				},
+			},
 			vimls = {},
 			html = {},
 			cssls = {},

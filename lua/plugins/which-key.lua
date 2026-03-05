@@ -1,4 +1,4 @@
--- https://github.com/folke/which-key.nvim
+-- https:/github.com/folke/which-key.nvim
 -- WhichKey helps you remember your Neovim keymaps, by showing available keybindings in a popup as you type.
 -- Use ctrl+u for navigate up in minibuffer
 -- Use ctrl+d for navigate down in minibuffer
@@ -12,10 +12,13 @@ return {
 		spec = {
 			{
 				mode = { "n", "v" },
-				{ "<leader><tab>", group = "tabs" },
+				{ "<leader>a", group = "avante ai", icon = { icon = "󰌢", color = "cyan" } },
+				{ "<leader>o", group = "open", icon = { icon = "󰏌", color = "green" } },
+				{ "<leader>l", group = "linter", icon = { icon = "", color = "green" } },
+				-- { "<leader><tab>", group = "tabs" },
 				{ "<leader>c", group = "code" },
 				{ "<leader>d", group = "debug" },
-				{ "<leader>dp", group = "profiler" },
+				-- { "<leader>dp", group = "profiler" },
 				{ "<leader>f", group = "file/find" },
 				{ "<leader>g", group = "git" },
 				{ "<leader>gh", group = "hunks" },
