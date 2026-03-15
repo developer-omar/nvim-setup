@@ -15,21 +15,21 @@
 
 return {
 	-- plugin for ai copilot
-	{
-		"zbirenbaum/copilot.lua",
-		opts = {
-			suggestion = { enabled = false },
-			panel = { enabled = false },
-		},
-	},
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	opts = {
+	-- 		suggestion = { enabled = false },
+	-- 		panel = { enabled = false },
+	-- 	},
+	-- },
 
 	-- plugin for cooperation between blink and copilot for suggestions
-	{
-		"giuxtaposition/blink-cmp-copilot",
-		dependencies = {
-			"zbirenbaum/copilot.lua",
-		},
-	},
+	-- {
+	-- 	"giuxtaposition/blink-cmp-copilot",
+	-- 	dependencies = {
+	-- 		"zbirenbaum/copilot.lua",
+	-- 	},
+	-- },
 
 	-- plugin for use an ai sidebar
 	{

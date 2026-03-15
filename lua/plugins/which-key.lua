@@ -7,14 +7,18 @@ return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	opts = {
-		preset = "modern",
+		-- modern, classic, helix
+		preset = "classic",
 		defaults = {},
 		spec = {
 			{
 				mode = { "n", "v" },
 				{ "<leader>a", group = "avante ai", icon = { icon = "󰌢", color = "cyan" } },
 				{ "<leader>o", group = "open", icon = { icon = "󰏌", color = "green" } },
-				{ "<leader>l", group = "linter", icon = { icon = "", color = "green" } },
+				{ "<leader>l", group = "programming languages", icon = { icon = "󰲌", color = "green" } },
+				{ "<leader>la", group = "angular", icon = { icon = "", color = "red" } },
+				{ "<leader>lf", group = "flutter", icon = { icon = "", color = "cyan" } },
+				{ "<leader>lt", group = "generate types" },
 				-- { "<leader><tab>", group = "tabs" },
 				{ "<leader>c", group = "code" },
 				{ "<leader>d", group = "debug" },

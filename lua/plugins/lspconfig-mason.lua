@@ -61,7 +61,7 @@ return {
 				map("gK", vim.lsp.buf.signature_help, "Signature Help")
 				map("<c-s-k>", vim.lsp.buf.signature_help, "Signature Help", { "i" })
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
-				map("<leader>ov", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
+				-- map("<leader>ov", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 				map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "v" })
 				map("<leader>cd", vim.diagnostic.open_float, "Open Diagnostic Float")
 				-- map("<leader>cf", vim.lsp.buf.format, "Format Code")

@@ -43,14 +43,14 @@ return {
 				delay = 200,
 				reveal = { "close" },
 			},
-			-- offsets = {
-			-- 	{
-			-- 		filetype = "NvimTree",
-			-- 		text = "File Explorer",
-			-- 		text_align = "left" | "center" | "right",
-			-- 		separator = true,
-			-- 	},
-			-- },
+			offsets = {
+				{
+					filetype = "snacks_layout_box",
+					text = "File Explorer",
+					-- text_align = "left" | "center" | "right",
+					separator = true,
+				},
+			},
 		},
 	},
 }

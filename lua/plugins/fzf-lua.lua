@@ -72,7 +72,7 @@ return {
 		{ "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
 		{ "<leader><space>", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Find Buffer" },
 		{ "<leader>uC", "<cmd>FzfLua colorschemes<cr>", desc = "Colorscheme with Preview" },
-		{ "<leader>oz", "<cmd>FzfLua zoxide<cr>", desc = "Open Zoxide" },
+		{ "<leader>z", "<cmd>FzfLua zoxide<cr>", desc = "Open Zoxide" },
 		-- {
 		--   "<leader>ss",
 		--   function()

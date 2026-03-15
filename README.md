@@ -1,6 +1,7 @@
 # My Nvim Configuration
 
-This configuration works with Php (Laravel, Symfony) and Javascript/Typescript (Vue, Angular, React).
+This configuration works with Php (Laravel, Symfony), Javascript/Typescript (Vue, Angular, React)
+and Flutter/dart.
 
 ## Requirements
 
@@ -59,6 +60,8 @@ This configuration works with Php (Laravel, Symfony) and Javascript/Typescript (
     ```bash
     sudo apt install chafa
     ```
+
+11. Install [Flutter](https://docs.flutter.dev/install/manual) for lsp autocomplete in dart files
 
 ## Installing new LSP servers and other tools (formatters, linters, etc)
 

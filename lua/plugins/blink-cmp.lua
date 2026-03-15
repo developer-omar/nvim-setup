@@ -88,7 +88,8 @@ return {
 			},
 
 			sources = {
-				default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
+				-- default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
+				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 				providers = {
 					lazydev = {
 						name = "LazyDev",
@@ -104,12 +105,13 @@ return {
 							},
 						},
 					},
-					copilot = {
-						name = "copilot",
-						module = "blink-cmp-copilot",
-						score_offset = 100,
-						async = true,
-					},
+					-- Provider for autocomplete with copilot
+					-- copilot = {
+					-- 	name = "copilot",
+					-- 	module = "blink-cmp-copilot",
+					-- 	score_offset = 100,
+					-- 	async = true,
+					-- },
 				},
 			},
 

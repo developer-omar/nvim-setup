@@ -6,21 +6,21 @@ return {
 	opts = {},
 	keys = {
 		{
-			"<Leader>oc",
+			"<Leader>lac",
 			"<Cmd>NgQuickSwitchComponent<CR>",
 			mode = { "n", "x" },
 			desc = "Open Angular Component File",
 			silent = true,
 		},
 		{
-			"<Leader>ot",
+			"<Leader>lat",
 			"<Cmd>NgQuickSwitchTemplate<CR>",
 			mode = { "n", "x" },
 			desc = "Open Angular Template File",
 			silent = true,
 		},
 		{
-			"<Leader>oT",
+			"<Leader>laT",
 			"<Cmd>NgQuickSwitchTest<CR>",
 			mode = { "n", "x" },
 			desc = "Open Angular Test File",
