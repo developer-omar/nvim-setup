@@ -48,6 +48,10 @@
         "path": "./angular-ts.json"
       },
       {
+        "language": "typescript",
+        "path": "./vitest.json"
+      },
+      {
         "language": "html",
         "path": "./htmlangular.json"
       },
