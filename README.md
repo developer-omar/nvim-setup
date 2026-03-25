@@ -61,12 +61,20 @@ and Flutter/dart.
     sudo apt install chafa
     ```
 
-11. Install [Flutter](https://docs.flutter.dev/install/manual) for lsp autocomplete in dart files
+11. Install [Flutter](https://docs.flutter.dev/install/manual) for lsp autocomplete
+    in dart files
+
+12. Install [jq](https://jqlang.org/download/) for formatting of json files
+
+    ```bash
+    sudo apt install jq
+    ```
 
 ## Installing new LSP servers and other tools (formatters, linters, etc)
 
-1. You need to add lsp servers to `lspconfig-mason.lua` file in `lspServers` variable, and if you want to install
-   other tools adding in `otherTools` variable in the same file (You can see the options for each lsp
+1. You need to add lsp servers to `lspconfig-mason.lua` file in `lspServers`
+   variable, and if you want to install other tools adding in `otherTools`
+   variable in the same file (You can see the options for each lsp
    file in the [documentation page](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md) ).
 
 2. Restart Neovim.

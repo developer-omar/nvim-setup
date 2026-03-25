@@ -5,27 +5,28 @@ return {
 	"danymat/neogen",
 	config = function()
 		require("neogen").setup({})
+		vim.keymap.set("n", "<leader>lg", "", { desc = "generate annotations", silent = true })
 		vim.keymap.set(
 			"n",
-			"<leader>cgc",
+			"<leader>lgc",
 			"<cmd>lua require('neogen').generate({type = 'class'})<cr>",
 			{ desc = "Generate Class Annotation", silent = true }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>cgf",
+			"<leader>lgf",
 			"<cmd>lua require('neogen').generate({type = 'func'})<cr>",
 			{ desc = "Generate Function Annotation", silent = true }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>cgt",
+			"<leader>lgt",
 			"<cmd>lua require('neogen').generate({type = 'type'})<cr>",
 			{ desc = "Generate Function Annotation", silent = true }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>cgF",
+			"<leader>lgF",
 			"<cmd>lua require('neogen').generate({type = 'file'})<cr>",
 			{ desc = "Generate File Annotation", silent = true }
 		)

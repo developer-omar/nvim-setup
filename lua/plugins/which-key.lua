@@ -15,7 +15,7 @@ return {
 				mode = { "n", "v" },
 				{ "<leader>a", group = "avante ai", icon = { icon = "󰌢", color = "cyan" } },
 				{ "<leader>o", group = "open", icon = { icon = "󰏌", color = "green" } },
-				{ "<leader>l", group = "programming languages", icon = { icon = "󰲌", color = "green" } },
+				{ "<leader>l", group = "programming language tools", icon = { icon = "󰲌", color = "green" } },
 				{ "<leader>la", group = "angular", icon = { icon = "", color = "red" } },
 				{ "<leader>lf", group = "flutter", icon = { icon = "", color = "cyan" } },
 				{ "<leader>lt", group = "generate types" },
