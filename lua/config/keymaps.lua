@@ -116,4 +116,4 @@ else
 end
 vim.keymap.set("n", "gB", function()
 	vim.cmd("silent !" .. open_command .. " " .. vim.fn.expand("%"))
-end, { silent = true })
+end, { desc = "Open File In The Web Browser" })
