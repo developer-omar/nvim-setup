@@ -104,3 +104,16 @@ vim.keymap.set("s", "p", "<c-o>c" .. "p", { noremap = true })
 vim.keymap.set("s", "P", "<c-o>c" .. "P", { noremap = true })
 -- Avoid exiting selection mode when erasing selected text with the Backspace key during snippet expansion.
 vim.keymap.set("s", "<bs>", "<c-o>c", { noremap = true })
+
+-- Define the open command based on OS to open a file in the web browser
+local open_command
+if vim.fn.has("mac") == 1 then
+	open_command = "open"
+elseif vim.fn.has("win32") == 1 then
+	open_command = "start"
+else
+	open_command = "xdg-open"
+end
+vim.keymap.set("n", "gB", function()
+	vim.cmd("silent !" .. open_command .. " " .. vim.fn.expand("%"))
+end, { silent = true })
