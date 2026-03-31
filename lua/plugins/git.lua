@@ -10,31 +10,37 @@ return {
 		lazy = true,
 		dependencies = {
 			"nvim-lua/plenary.nvim", -- required
-			"sindrets/diffview.nvim", -- optional - Diff integration
+			-- optional - Diff integration
+			{
+				"sindrets/diffview.nvim",
+				keys = {
+					{ "q", "<cmd>DiffviewClose<cr>", desc = "Close Diffview Tab" },
+				},
+			},
 			"ibhagwan/fzf-lua", -- optional
 		},
 		cmd = "Neogit",
 		-- config = true,
 		keys = {
 			{ "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" },
-			{
-				"<leader>gv",
-				"<cmd>Neogit kind=vsplit<cr>",
-				mode = "n",
-				desc = "Open the status buffer in a vertical window",
-			},
-			{
-				"<leader>gs",
-				"<cmd>Neogit kind=split<cr>",
-				mode = "n",
-				desc = "Open the status buffer in a horizontal window",
-			},
-			{
-				"<leader>gf",
-				"<cmd>Neogit kind=floating<cr>",
-				mode = "n",
-				desc = "Open the status buffer in a floating window",
-			},
+			-- {
+			-- 	"<leader>gv",
+			-- 	"<cmd>Neogit kind=vsplit<cr>",
+			-- 	mode = "n",
+			-- 	desc = "Open the status buffer in a vertical window",
+			-- },
+			-- {
+			-- 	"<leader>gs",
+			-- 	"<cmd>Neogit kind=split<cr>",
+			-- 	mode = "n",
+			-- 	desc = "Open the status buffer in a horizontal window",
+			-- },
+			-- {
+			-- 	"<leader>gf",
+			-- 	"<cmd>Neogit kind=floating<cr>",
+			-- 	mode = "n",
+			-- 	desc = "Open the status buffer in a floating window",
+			-- },
 		},
 	},
 	-- {
