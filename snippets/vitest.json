@@ -11,7 +11,7 @@
     "prefix": "a-component-test",
     "body": [
       "import { ComponentFixture, TestBed } from '@angular/core/testing';",
-      "import ${1:Component} from './$2';",
+      "import { $3 } from './$2';",
       "",
       "describe('${1:Component}', () => {",
       "  let component: ${1:Component};",
@@ -28,7 +28,7 @@
       "",
       "  it('Should create', () => {",
       "    expect(component).toBeTruthy();",
-      "  });$3",
+      "  });$4",
       "});"
     ]
   }
