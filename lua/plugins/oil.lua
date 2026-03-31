@@ -1,6 +1,9 @@
 -- https://github.com/stevearc/oil.nvim
 -- A vim-vinegar like file explorer that lets you edit your filesystem like a normal Neovim buffer.
 
+-- https://github.com/simaxme/oil-angular-schematics.nvim
+-- A simple plugin that allows the creation of angular schematics inside your oil window.
+
 return {
 	"stevearc/oil.nvim",
 	---@module 'oil'
