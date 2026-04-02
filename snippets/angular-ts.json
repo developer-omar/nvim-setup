@@ -1,10 +1,6 @@
 {
-  "Angular Route": {
-    "prefix": "a-route",
-    "body": ["{", "\tpath: '$1',", "\tcomponent: $2", "},"]
-  },
   "Angular Redirection Route": {
-    "prefix": "a-redirect-route",
+    "prefix": "a-route-path-redirect",
     "body": [
       "{",
       "\tpath: '$1',",
@@ -14,23 +10,11 @@
     ]
   },
   "Angular Comodin Route": {
-    "prefix": "a-comodin-route",
+    "prefix": "a-route-path-comodin",
     "body": ["{", "\tpath: '**',", "\tcomponent: $1", "}"]
   },
-  "Angular Children Routes": {
-    "prefix": "a-children-route",
-    "body": [
-      "{",
-      "\tpath: '$1',",
-      "\tcomponent: $2,",
-      "\tchildren: [",
-      "\t\t$3",
-      "\t]",
-      "},"
-    ]
-  },
-  "Angular Lazy Loading Routes": {
-    "prefix": "a-lazy-loading-route",
-    "body": ["{", "\tpath: '$1',", "\tloadChildren: import('$1')", "},"]
+  "Angular Route - Lazily Loaded Components and Routes ": {
+    "prefix": "a-route-path-lazy-default",
+    "body": ["{", "\tpath: '$1',", "\tloadComponent: () => import('$2')", "},"]
   }
 }
