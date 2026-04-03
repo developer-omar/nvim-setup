@@ -88,8 +88,6 @@ return {
 			},
 
 			sources = {
-				-- default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
-				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 				providers = {
 					lazydev = {
 						name = "LazyDev",
@@ -105,7 +103,7 @@ return {
 							},
 						},
 					},
-					-- Provider for autocomplete with copilot
+					-- Provider for autocompleting with Copilot suggestions
 					-- copilot = {
 					-- 	name = "copilot",
 					-- 	module = "blink-cmp-copilot",
@@ -113,6 +111,9 @@ return {
 					-- 	async = true,
 					-- },
 				},
+				-- This is a configuration for using Copilot Suggestions
+				-- default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
+				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 			},
 
 			-- snippets = { preset = "luasnip" },

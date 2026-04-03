@@ -9,27 +9,31 @@
 -- It provides users with AI-driven code suggestions and the ability to apply these
 -- recommendations directly to their source files with minimal effort.
 
--- if true then
--- 	return {}
--- end
+-- EXTRA CONFIGURATIONS
+-- Uncomment copilot for installing with Mason
+-- Configure Blink for autocompletion with copilot suggestions
+
+if true then
+	return {}
+end
 
 return {
 	-- plugin for ai copilot
-	-- {
-	-- 	"zbirenbaum/copilot.lua",
-	-- 	opts = {
-	-- 		suggestion = { enabled = false },
-	-- 		panel = { enabled = false },
-	-- 	},
-	-- },
+	{
+		"zbirenbaum/copilot.lua",
+		opts = {
+			suggestion = { enabled = false },
+			panel = { enabled = false },
+		},
+	},
 
 	-- plugin for cooperation between blink and copilot for suggestions
-	-- {
-	-- 	"giuxtaposition/blink-cmp-copilot",
-	-- 	dependencies = {
-	-- 		"zbirenbaum/copilot.lua",
-	-- 	},
-	-- },
+	{
+		"giuxtaposition/blink-cmp-copilot",
+		dependencies = {
+			"zbirenbaum/copilot.lua",
+		},
+	},
 
 	-- plugin for use an ai sidebar
 	{

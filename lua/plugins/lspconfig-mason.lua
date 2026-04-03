@@ -65,6 +65,8 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "v" })
 				map("<leader>cd", vim.diagnostic.open_float, "Open Diagnostic Float")
 				-- map("<leader>cf", vim.lsp.buf.format, "Format Code")
+				-- View LSPs, Formatters and Linters attached to a Buffer
+				vim.keymap.set("n", "<leader>cI", "<cmd>checkhealth lsp<cr>", { desc = "LSP: Info", silent = true })
 
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client
@@ -165,13 +167,13 @@ return {
 
 		local lspServers = {
 			lua_ls = {
-				settings = {
-					Lua = {
-						workspace = {
-							library = vim.api.nvim_get_runtime_file("", true),
-						},
-					},
-				},
+				-- settings = {
+				-- 	Lua = {
+				-- 		workspace = {
+				-- 			library = vim.api.nvim_get_runtime_file("", true),
+				-- 		},
+				-- 	},
+				-- },
 			},
 			vimls = {},
 			html = {},
@@ -208,7 +210,8 @@ return {
 			laravel_ls = {},
 			rnix = {},
 			gopls = {},
-			copilot = {},
+			-- Language server for github copilot
+			-- copilot = {},
 		}
 
 		local otherTools = {
