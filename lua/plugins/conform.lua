@@ -57,6 +57,22 @@ return {
 			},
 
 			formatters = {
+				-- prettier = {
+				-- 	condition = function(ctx)
+				-- 		return vim.fs.find({
+				-- 			".prettierrc",
+				-- 			".prettierrc.json",
+				-- 			".prettierrc.yml",
+				-- 			".prettierrc.yaml",
+				-- 			".prettierrc.js",
+				-- 			"prettier.config.js",
+				-- 		}, {
+				-- 			path = ctx.filename,
+				-- 			upward = true,
+				-- 			stop = vim.uv.cwd(),
+				-- 		})[1] ~= nil
+				-- 	end,
+				-- },
 				phpcsfixer = {
 					command = vim.fn.stdpath("config") .. "/scripts/docker-php-cs-fixer.sh",
 					args = { "$FILENAME" },
@@ -75,6 +91,7 @@ return {
 				async = true,
 			})
 		end, { desc = "Format Code or Range" })
+		vim.keymap.set("n", "<leader>cF", "<cmd>ConformInfo<cr>", { desc = "LSP: Buffer Formatter(s)" })
 	end,
 }
 

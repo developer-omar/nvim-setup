@@ -55,13 +55,7 @@ vim.keymap.set("v", "gS", ":s/\\%V\\<\\w/\\u&/g<cr>gv<esc>:noh<cr>", { desc = "C
 -- vim.keymap.set("n", "<s-l>", ":bnext<cr>", { desc = "Next Buffer", silent = true })
 -- vim.keymap.set("n", "<s-h>", ":bprevious<cr>", { desc = "Previous Buffer", silent = true })
 vim.keymap.set("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer And Window", silent = true })
-vim.keymap.set("n", "<leader>bd", function()
-	Snacks.bufdelete()
-end, { desc = "Delete Buffer", silent = true })
 -- vim.keymap.set("n", "<leader>bq", ":%bd|e#|bd#<cr>", { desc = "Delete Other Buffers", silent = true })
-vim.keymap.set("n", "<leader>bq", function()
-	Snacks.bufdelete.other()
-end, { desc = "Delete Other Buffers", silent = true })
 
 -- <c-o>b<c-o>de is to delete a word without a whitespace
 vim.keymap.set("i", "<c-d>", "<c-o>b<c-o>dw", { desc = "Delete A Word In Insert Mode" })

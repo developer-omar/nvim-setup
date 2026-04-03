@@ -76,7 +76,6 @@ return {
 			end,
 			desc = "Buffer Lines",
 		},
-
 		{
 			"<leader>st",
 			function()
@@ -84,13 +83,26 @@ return {
 			end,
 			desc = "Todo",
 		},
-
 		{
 			"<leader>sT",
 			function()
 				Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME", "NOTE" } })
 			end,
 			desc = "Todo/Fix/Fixme",
+		},
+		{
+			"<leader>bd",
+			function()
+				Snacks.bufdelete()
+			end,
+			desc = "Delete Buffer",
+		},
+		{
+			"<leader>bo",
+			function()
+				Snacks.bufdelete.other()
+			end,
+			desc = "Delete Other Buffers",
 		},
 	},
 	init = function()
